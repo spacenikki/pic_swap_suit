@@ -1,0 +1,21 @@
+#main {
+	width: 1000px;
+	height: 700px ;
+}
+
+/*separate by comma , so it will apply to both*/
+#firstrow, #secondrow {
+	width: 1000px;
+	height: 180px ;
+}
+
+#img {
+	display: inline-block;
+	position: relative;
+	width: 150px;
+	height: 150px ;
+}
+
+
+
+

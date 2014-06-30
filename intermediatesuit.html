@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<title>jQuery Basic</title> <!--tab will show--> 
+		<link rel="stylesheet" type="text/css" href="intermediate.css">
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript"> 
+			
+		// apply same technique as basic3.html
+		$(document).ready(function(){
+			$('img').hover(function(){ 
+				var k = $(this).attr('src');
+
+				//  when get hover IN, replace original src with new src
+				// back by setter
+				$(this).attr('src',$(this).attr('data-alt-src'));
+
+				//  when get hover OUT, replace new src w/ old src 
+				// front - by setter
+				$(this).attr('data-alt-src', k);
+
+				console.log('data-alt-src value is', $(this).attr('data-alt-src'));
+				// later, learn how to add this to this code
+				// $(this).fadeIn(1600);
+				// $(this).fadeOut(1600);
+			}, function(){})
+		});
+
+		</script>
+
+
+	<head>
+	<div id ="main">
+		<div id="firstrow">
+			<img src ="front.png" data-alt-src="back.png"/>
+			<img src ="front.png" data-alt-src="back.png"/>
+			<img src ="front.png" data-alt-src="back.png"/>
+			<img src ="front.png" data-alt-src="back.png"/>
+		</div>
+		<div id="secondrow">
+			<img src ="front.png" data-alt-src="back.png"/>
+			<img src ="front.png" data-alt-src="back.png"/>
+			<img src ="front.png" data-alt-src="back.png"/>
+			<img src ="front.png" data-alt-src="back.png"/>
+		</div>
+	</div>
+
+
+	</head>
+	
+
+
+</html>
